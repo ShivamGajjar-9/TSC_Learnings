@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+      * {
+        padding: 0px;
+      }
+
+      body {
+        background-color: hsl(30, 38%, 92%);
+        min-height: 100vh;
+        font-size: 14px;
+        font-family: "Montserrat", sans-serif;
+        color: hsl(228, 12%, 48%);
+      }
+
+      h1 {
+        font-family: "Fraunces", serif;
+        color: hsl(212, 21%, 14%);
+        font-size: 2rem;
+      }
+
+      main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+
+      section {
+        background-color: hsl(0, 0%, 100%);
+        display: flex;
+        flex-direction: row;
+        border-radius: 20px;
+        width: 600px;
+      }
+
+      img {
+        object-fit: cover;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+      }
+
+      .ctg {
+        text-transform: uppercase;
+        letter-spacing: 4px;
+      }
+
+      .description {
+        padding: 35px;
+      }
+
+      .amt {
+        align-items: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+      }
+
+      .sale {
+        font-family: "Fraunces", serif;
+        color: hsl(158, 36%, 37%);
+        font-size: 1.7rem;
+        margin-right: 20px;
+      }
+
+      .list {
+        text-decoration: line-through;
+      }
+
+      button {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        background-color: hsl(158, 36%, 37%);
+        color: hsl(0, 0%, 100%);
+        padding: 20px;
+        border-style: none;
+        border-radius: 10px;
+        height: 50px;
+        width: 100%;
+      }
+
+     .fa-cart-shopping {
+        margin-right: 10px;
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+
+      .attribution a {
+        color: hsl(158, 36%, 37%);
+      }
+
+      @media only screen and (max-width: 600px) {
+        section {
+          flex-direction: column;
+          width: 400px;
+        }
+
+        h1 {
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+
+        .amt {
+          /* display: flex; */
+          align-items: center;
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+
+        img {
+          width: 100%;
+          border-top-left-radius: 20px;
+          border-top-right-radius: 20px;
+          border-bottom-left-radius: 0px;
+        }
+      }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Website</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <img
+          srcset="
+            images/image-product-desktop.jpg 600w,
+            images/image-product-mobile.jpg  686w
+          "
+          sizes="(max-width: 600px) 686px, 300px"
+          src="images/image-product-desktop.jpg"
+          alt="A bottle of perfume surrounded by foliage"
+        />
+        <div class="description">
+          <span class="ctg">Perfume</span>
+          <h1>Gabrielle Essence Eau De Parfum</h1>
+          <p>
+            A floral, solar and voluptuous interpretation composed by Olivier
+            Polge, Perfumer-Creator for the House of CHANEL.
+          </p>
+          <div class="amt">
+            <span class="sale">$149.99</span>
+            <span class="list">$169.99</span>
+          </div>
+          <button><i class="fa-solid fa-cart-shopping"></i>Add to Cart</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
