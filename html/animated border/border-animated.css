@@ -1,0 +1,35 @@
+.parent{
+  display: flex;
+  justify-content: center; /* Centers the box horizontally */
+  align-items: center;     /* Centers the box vertically */
+  height: 100vh;           /* Full viewport height to center vertically */ 
+  background-color: whitesmoke; /* Just to visualize the parent */
+  z-index: -3;
+  
+}
+.box{
+  position: relative;
+  width: 400px;
+  background-color: #71a13a; /* Dark background for the box */
+  color: aliceblue;
+  text-align: center;
+  font-family: sans-serif;
+  padding: 2em;
+  border-radius: 1rem;
+  
+  z-index: 3; /* Ensure the box is above the pseudo-element */
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+
+  background-color: blue;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1; 
+  border-radius: 1.2rem; 
+   opacity: 0.6; 
+}
+

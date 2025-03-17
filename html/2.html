@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DIv Task-1</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+        padding: 0;
+      }
+
+      .container {
+        height: 200vh;
+        margin-top: 30px;
+        margin-left: 30px;
+      }
+      .bigbox1 {
+        height: 100vh;
+      }
+      .bigbox2 {
+        position: relative;
+        background-color: gray;
+        height: 100vh;
+      }
+      .b {
+        height: 100px;
+        width: 100px;
+      }
+      .box1 {
+        background-color: red;
+        margin-bottom: 10px;
+      }
+      .box2 {
+        background-color: blue;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+        margin-top: 20px;
+        margin-left: 20px;
+      }
+      .box3 {
+        background-color: green;
+        z-index: -1;
+      }
+      .box4 {
+        background-color: yellow;
+        position: fixed;
+        left: 1400px;
+        top: 620px;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="bigbox1">
+        <div class="b box1">box1</div>
+        <div class="b box2">box2</div>
+        <div class="b box3">box3</div>
+        <div class="b box4">box4</div>
+      </div>
+      <div class="bigbox2"></div>
+    </div>
+  </body>
+</html>
